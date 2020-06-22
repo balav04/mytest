@@ -57,6 +57,9 @@ code {
 		.navbar-toggler {
 		    display: none;
 		}
+		.row{
+			padding-top: 10px
+		}
 		
 		.header-right a {
 		  float: left;
@@ -102,4 +105,7 @@ code {
 }
 .input-box{
 	margin-top:10px;
+}
+.card-img-top{
+	width:100px
 }
