@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
  const MovieCard = (props) =>{
 	 
 	   const [movieData, setMovieData] = useState([]);
-console.log(props.text)
+	   const [showItems,setShowItems] = useState(3);
 	 useEffect(() => {
     fetch(`http://omdbapi.com/?apikey=b9bd48a6&s=${props.text}&type=movie`)
         .then(async response => {
@@ -12,9 +12,18 @@ console.log(props.text)
 			setMovieData(data.Search)
   });
 	 },[props.text])
- 
+	 window.onscroll = function() {
+  var d = document.documentElement;
+  var offset = d.scrollTop + window.innerHeight;
+  var height = d.offsetHeight;
+  if (offset >= height) {
+    setShowItems(showItems+3)
+  }
+};
      return<>
-	 {movieData&&movieData.map((val)=>{
+	 {movieData&&movieData.map((val,index)=>{
+		 if(index < showItems){
+		
 		 return <div className="row card-block">
 		 <div className="card" style={{"width": "20rem"}}>
   <img src={val.Poster} className="card-img-top" alt="..."/>
@@ -26,6 +35,7 @@ console.log(props.text)
     </div> 
   </div>
 </div>
+		 }
 	 })}
 	 </>
   
