@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { withRouter } from 'react-router-dom';
-import SearchBar from './SearchBar'
-import MovieCard from './MovieCard'
-import './../index.css'
+import SearchBar from '../SearchBar/index'
+import Moviecard from '../Moviecard/index'
 
 export default function Home(props) {
 const [tittle, setMovieTittle] = useState("English");
@@ -14,7 +13,7 @@ const searchString = (str) => {
 		    <SearchBar updateData = {searchString}/>   
 	<div className = "content-top-card">
         <section>
-		<MovieCard text = {tittle}/>
+		<Moviecard text = {tittle}/>
 			</section>
    </div>
 </React.Fragment>

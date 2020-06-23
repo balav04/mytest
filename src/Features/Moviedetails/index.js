@@ -1,7 +1,6 @@
 import React, {Component } from "react";
-import './../index.css'
  
- class MovieDetails extends Component {
+ class Moviedetails extends Component {
 	 constructor(){
 		 super()
 		 this.state = {response:{}}
@@ -57,4 +56,4 @@ render(){
   )
 }
 }
-export default MovieDetails;
+export default Moviedetails;

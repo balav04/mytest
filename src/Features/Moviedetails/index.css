@@ -1,16 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 .navbar{
 			position: fixed;
@@ -97,28 +84,3 @@ code {
 		    float: none;
 		  }
 		}
-.search-btn{
-	margin-left:50px;
-}
-.content-top-card{
-	padding-top: 14px;
-}
-.input-box{
-	margin-top:10px;
-}
-.card-img-top{
-	width:100px
-}
-	.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  grid-gap: 10px;
-  padding: 10px;
-}
-.grid-container > div {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-  grid-auto-flow:row
-}
